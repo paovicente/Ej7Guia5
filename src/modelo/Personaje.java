@@ -1,11 +1,10 @@
 package modelo;
 
-import modelo.Mazo;
-
-public abstract class Personaje {
+public abstract class Personaje implements Interfaz{
 
 	protected String nombre;
-		
+	private Mazo mazo = Mazo.getInstancia();
+	
 	public Personaje(String nombre) {
 		this.nombre = nombre;
 	}
@@ -18,7 +17,7 @@ public abstract class Personaje {
 		this.nombre = nombre;
 	}
 
-	public double getAtaqueCorto() {
+	/*public double getAtaqueCorto() {
 		return this.getAtaqueCorto();
 	}
 	
@@ -28,9 +27,13 @@ public abstract class Personaje {
 	
 	public double getArmadura() {
 		return this.getArmadura();
-	}
-	
-	/*public Personaje eligeAdversario() {
-		return Mazo.getPersonaje();
 	}*/
+	
+	public Interfaz elijeAdversario()
+	{
+		Interfaz adversario = this;
+		while (adversario == this)
+			adversario = mazo.getPersonaje();
+		return adversario;
+	}
 }

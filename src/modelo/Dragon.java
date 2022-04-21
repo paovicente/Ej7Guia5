@@ -21,4 +21,8 @@ public class Dragon extends Personaje{
 		return 10000;
 	}
 	
+	@Override
+	public Interfaz eligeAdversario() {
+		return super.elijeAdversario();
+	}
 }

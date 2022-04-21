@@ -21,4 +21,8 @@ public class Guerrero extends Personaje{
 		return 1500;
 	}
 	
+	@Override
+	public Interfaz eligeAdversario() {
+		return super.elijeAdversario();
+	}
 }

@@ -2,10 +2,10 @@ package modelo;
 
 public class PersonajeFactory {
 
-	public Personaje getPersonaje(String tipo, String elemento, String nombre) {
+	public static Decorator getPersonaje(String tipo, String elemento, String nombre) {
 		
-		Personaje personaje = null;
-		Personaje personajeConTipo = null;
+		Interfaz personaje = null;
+		Decorator personajeConTipo = null;
 		
 		if (tipo.equalsIgnoreCase("MAGO"))
 			personaje = new Mago(nombre);

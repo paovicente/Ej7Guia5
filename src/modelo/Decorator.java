@@ -1,11 +1,19 @@
 package modelo;
 
-public abstract class Decorator extends Personaje{
+public abstract class Decorator implements Interfaz{
 
-	protected Personaje p;
+	protected Interfaz i;
 	
-	public Decorator(Personaje p) {
-		this.p = p;
+	private Mazo mazo = Mazo.getInstancia();
+	
+	public Decorator(Interfaz i) {
+		this.i = i;
 	}
 	
+	public Interfaz eligeAdversario() {
+		Interfaz adversario = this;
+		while (adversario == this)
+			adversario = mazo.getPersonaje();
+		return adversario;		
+	}
 }

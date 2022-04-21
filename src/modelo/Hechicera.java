@@ -21,4 +21,8 @@ public class Hechicera extends Personaje{
 		return 1000;
 	}
 	
+	@Override
+	public Interfaz eligeAdversario() {
+		return super.elijeAdversario();
+	}
 }

@@ -2,25 +2,23 @@ package modelo;
 
 public class Tierra extends Decorator{
 
-	public Tierra(Personaje p) {
-		super(p);
+	public Tierra(Interfaz i) {
+		super(i);
 	}
-
-	private Personaje personaje;
 
 	@Override
 	public double getAtaqueCorto() {
-		return personaje.getAtaqueCorto()*0.8;	//-20%
+		return this.i.getAtaqueCorto()*0.8;	//-20%
 	}
 
 	@Override
 	public double getAtaqueDistante() {
-		return personaje.getAtaqueDistante()*0.7;	//-30%
+		return this.i.getAtaqueDistante()*0.7;	//-30%
 	}
 
 	@Override
 	public double getArmadura() {
-		return personaje.getArmadura()*1.25;	//+25%
+		return this.i.getArmadura()*1.25;	//+25%
 	}
 	
 	

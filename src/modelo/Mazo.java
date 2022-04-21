@@ -6,7 +6,7 @@ public class Mazo {
 
 	private static Mazo instancia = null;	//patrón Singleton
 	
-	private ArrayList<Personaje> personajes = new ArrayList<Personaje>();
+	private ArrayList<Interfaz> personajes = new ArrayList<Interfaz>();
 	
 	public static Mazo getInstancia() {
 		if (instancia == null)
@@ -14,14 +14,20 @@ public class Mazo {
 		return instancia;
 	}
 
-	public ArrayList<Personaje> getPersonajes() {
+	public ArrayList<Interfaz> getPersonajes() {
 		return personajes;
 	}
 
-	public Personaje getPersonaje() {
+	public Interfaz getPersonaje() {
 		int indice = (int) Math.random()*personajes.size();
 		return personajes.get(indice);
 	}
 	
+	public void agregarPersonaje(Interfaz personaje) {
+		this.personajes.add(personaje);
+	}
 	
+	public void eliminarPersonaje(Interfaz personaje) {
+		this.personajes.remove(personaje);
+	}
 }

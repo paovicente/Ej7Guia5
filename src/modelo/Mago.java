@@ -20,4 +20,9 @@ public class Mago extends Personaje{
 	public double getArmadura() {
 		return 500;
 	}
+
+	@Override
+	public Interfaz eligeAdversario() {
+		return super.elijeAdversario();
+	}
 }
