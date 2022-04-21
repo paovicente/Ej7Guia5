@@ -1,19 +1,21 @@
 package modelo;
 
 public class Agua extends Decorator{
-
-	private Personaje personaje;
+	
+	public Agua(Personaje p) {
+		super(p);
+	}
 
 	@Override
 	public double getAtaqueCorto() {
-		return personaje.getAtaqueCorto()*1.2;	//+20%
+		return this.p.getAtaqueCorto()*1.2;	//+20%
 	}
 
 	//para el ataque distante no implemento método ya que queda igual el valor, no se le suma ni resta nada
 	
 	@Override
 	public double getArmadura() {
-		return personaje.getArmadura()*0.85;	//-15%
+		return this.p.getArmadura()*0.85;	//-15%
 	}
 	
 }

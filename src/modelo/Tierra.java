@@ -2,6 +2,10 @@ package modelo;
 
 public class Tierra extends Decorator{
 
+	public Tierra(Personaje p) {
+		super(p);
+	}
+
 	private Personaje personaje;
 
 	@Override

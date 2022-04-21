@@ -2,21 +2,23 @@ package modelo;
 
 public class Fuego extends Decorator{
 
-	private Personaje personaje;
+	public Fuego(Personaje p) {
+		super(p);
+	}
 
 	@Override
 	public double getAtaqueCorto() {
-		return personaje.getAtaqueCorto()*1.8;	//+80%
+		return this.p.getAtaqueCorto()*1.8;	//+80%
 	}
 
 	@Override
 	public double getAtaqueDistante() {
-		return personaje.getAtaqueDistante()*1.7;	//+70%
+		return this.p.getAtaqueDistante()*1.7;	//+70%
 	}
 
 	@Override
 	public double getArmadura() {
-		return personaje.getArmadura()*0.5;	//-50%
+		return this.p.getArmadura()*0.5;	//-50%
 	}
 
 	public void incendiar() {

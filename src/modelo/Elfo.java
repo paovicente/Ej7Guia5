@@ -2,6 +2,10 @@ package modelo;
 
 public class Elfo extends Personaje{
 
+	public Elfo(String nombre) {
+		super(nombre);
+	}
+
 	@Override
 	public double getAtaqueCorto() {
 		return 20;

@@ -2,6 +2,10 @@ package modelo;
 
 public class Dragon extends Personaje{
 
+	public Dragon(String nombre) {
+		super(nombre);
+	}
+
 	@Override
 	public double getAtaqueCorto() {
 		return 500;

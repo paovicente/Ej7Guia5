@@ -2,6 +2,10 @@ package modelo;
 
 public class Hechicera extends Personaje{
 
+	public Hechicera(String nombre) {
+		super(nombre);
+	}
+
 	@Override
 	public double getAtaqueCorto() {
 		return 70;

@@ -4,20 +4,30 @@ import modelo.Mazo;
 
 public abstract class Personaje {
 
-	protected double ataqueCorto;
-	protected double ataqueDistante;
-	protected double armadura;
-	
+	protected String nombre;
+		
+	public Personaje(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
 	public double getAtaqueCorto() {
-		return this.ataqueCorto;
+		return this.getAtaqueCorto();
 	}
 	
 	public double getAtaqueDistante() {
-		return this.ataqueDistante;
+		return this.getAtaqueDistante();
 	}
 	
 	public double getArmadura() {
-		return this.armadura;
+		return this.getArmadura();
 	}
 	
 	/*public Personaje eligeAdversario() {
